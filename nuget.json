@@ -1,0 +1,10 @@
+{
+  "src": "./src",
+  "packages": {
+    "AspNet.Module.Host": true,
+    "AspNet.Module.Host.ApiVersioning": true,
+    "AspNet.Module.Host.Cors": true,
+    "AspNet.Module.Host.Health": true,
+    "AspNet.Module.Host.Mvc": true
+  }
+}
