@@ -19,8 +19,8 @@
 
     <ItemGroup>
         <PackageReference Include="AspNet.Module.Common" Version="1.0.0"/>
-        <PackageReference Include="AspNetCore.HealthChecks.Prometheus.Metrics" Version="8.0.0" />
-        <PackageReference Include="AspNetCore.HealthChecks.System" Version="8.0.0" />
+        <PackageReference Include="AspNetCore.HealthChecks.Prometheus.Metrics" Version="8.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.System" Version="8.0.0"/>
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using AspNet.Module.Host.Mvc.Json;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AspNet.Module.Host.Mvc;
@@ -8,6 +9,7 @@ namespace AspNet.Module.Host.Mvc;
 public class MvcConfig
 {
     public Action<IMvcBuilder>? Configure { get; init; }
+    public Action<MvcOptions>? ConfigureOptions { get; init; }
 
     public bool LowercaseUrls { get; init; } = true;
 

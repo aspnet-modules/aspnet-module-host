@@ -36,7 +36,7 @@ public class MvcModule : IAspNetModule
     public void Configure(AspNetModuleContext ctx)
     {
         ctx.Services.Configure<RouteOptions>(options => { options.LowercaseUrls = _config.LowercaseUrls; });
-        var builder = ctx.Services.AddControllers();
+        var builder = ctx.Services.AddControllers(o => { _config?.ConfigureOptions?.Invoke(o); });
         builder.ConfigureApiBehaviorOptions(options => options.InvalidModelStateResponseFactory =
             context => InvalidModelStateResponseFactory.ValidationErrorResult(context, ctx.Environment));
         builder.AddApplicationPart(ctx.EntryAssembly).AddControllersAsServices();
