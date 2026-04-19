@@ -1,8 +1,8 @@
-# AspNet.Module.Host
+# Модули Host
 
-Host-side modules for common ASP.NET application setup.
+## Версионность API - ApiVersioning
 
-## API Versioning
+Модуль добавляет версионность АПИ.
 
 ```sh
 dotnet add package AspNet.Module.Host.ApiVersioning
@@ -17,6 +17,8 @@ builder.RegisterModule<ApiVersioningModule>();
 
 ## CORS
 
+Модуль политики CORS.
+
 ```sh
 dotnet add package AspNet.Module.Host.Cors
 ```
@@ -28,9 +30,10 @@ var builder = AspNetWebApplication.CreateBuilder(args);
 builder.RegisterModule<CorsModule>();
 ```
 
-## Health Endpoints
+## Работоспособность Liveness/Readiness - Health
 
-Adds liveness and readiness endpoints.
+Модуль добавляет эндпоинты
+для [Liveness/Readiness](https://kubernetes.io/ru/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
 
 ```sh
 dotnet add package AspNet.Module.Host.Health
@@ -43,7 +46,9 @@ var builder = AspNetWebApplication.CreateBuilder(args);
 builder.RegisterModule<HealthModule>();
 ```
 
-## MVC Controllers
+## Контроллеры - Mvc
+
+Модуль регистрации контроллеров.
 
 ```sh
 dotnet add package AspNet.Module.Host.Mvc
@@ -55,7 +60,3 @@ using AspNet.Module.Host.Mvc;
 var builder = AspNetWebApplication.CreateBuilder(args);
 builder.RegisterModule<MvcModule>();
 ```
-
-## Source Code
-
-- Repository: [github.com/aspnet-modules/aspnet-module-host](https://github.com/aspnet-modules/aspnet-module-host)
